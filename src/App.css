@@ -34,6 +34,8 @@ article.menu-item .item-info section{
     margin-bottom: 1rem;
 }
 article.menu-item .item-info h2{
+    font-weight : "bold";
+    font-size : 1.15rem;
     text-transform: capitalize;
 }
 article.menu-item .item-info span{
