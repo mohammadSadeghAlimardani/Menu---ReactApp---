@@ -1,0 +1,1007 @@
+/* =========== CSS Reset =========== */
+/* ================================= */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* ===================================== */
+/* ===================================== */
+/* =========== Global Styles =========== */
+/* ===================================== */
+/* ===================================== */
+:root{
+
+    --Aqua-1 : #E0FFFF;
+    --Aqua-2 : #B2FFFF;
+    --Aqua-3 : #80FFFF;
+    --Aqua-4 : #4DFFFF;
+    --Aqua-5 : #1AFFFF;
+    --Aqua-6 : #00E5E5;
+    --Aqua-7 : #00CCCC;
+    --Aqua-8 : #00B2B2;
+    --Aqua-9 : #009999;
+    --Aqua-10 : #007F7F;
+    --Aqua-11 : #006666;
+    --Aqua-12 : #004C4C;
+
+    --Blue-1 : #E6F0FF;
+    --Blue-2 : #CCE0FF;
+    --Blue-3 : #B3D1FF;
+    --Blue-4 : #99C2FF;
+    --Blue-5 : #80B3FF;
+    --Blue-6 : #66A3FF;
+    --Blue-7 : #4D94FF;
+    --Blue-8 : #337FFF;
+    --Blue-9 : #1A66FF;
+    --Blue-10 : #004DCC;
+    --Blue-11 : #003399;
+    --Blue-12 : #001A4D;
+
+    --Brown-1 : #F5ECE6;
+    --Brown-2 : #E6D4C3;
+    --Brown-3 : #D9BFAF;
+    --Brown-4 : #CCA98C;
+    --Brown-5 : #BF9479;
+    --Brown-6 : #B07F66;
+    --Brown-7 : #99664D;
+    --Brown-8 : #804D33;
+    --Brown-9 : #66331F;
+    --Brown-10 : #4D1F0F;
+    --Brown-11 : #331107;
+    --Brown-12 : #1A0A03;
+
+    --Cream-Beige-1 : #FFFDF5;
+    --Cream-Beige-2 : #FFF9E6;
+    --Cream-Beige-3 : #FFF2CC;
+    --Cream-Beige-4 : #FFEAB3;
+    --Cream-Beige-5 : #FFE299;
+    --Cream-Beige-6 : #FFD97F;
+    --Cream-Beige-7 : #FFD066;
+    --Cream-Beige-8 : #FFC74D;
+    --Cream-Beige-9 : #E6AD33;
+    --Cream-Beige-10 : #CC941A;
+    --Cream-Beige-11 : #B37A00;
+    --Cream-Beige-12 : #8C5C00;
+
+    --Green-1 : #E6FFF0;
+    --Green-2 : #CCFFE0;
+    --Green-3 : #B3FFD1;
+    --Green-4 : #99FFC2;
+    --Green-5 : #80FFB3;
+    --Green-6 : #66E699;
+    --Green-7 : #4DCC80;
+    --Green-8 : #33B266;
+    --Green-9 : #1A994D;
+    --Green-10 : #007F33;
+    --Green-11 : #00661A;
+    --Green-12 : #00330D;
+
+    --Indigo-1 : #E6E6FA;
+    --Indigo-2 : #D1CCF0;
+    --Indigo-3 : #BBA3E6;
+    --Indigo-4 : #A67AE6;
+    --Indigo-5 : #9152E6;
+    --Indigo-6 : #7A33CC;
+    --Indigo-7 : #661AB3;
+    --Indigo-8 : #520099;
+    --Indigo-9 : #3D0073;
+    --Indigo-10 : #2A0055;
+    --Indigo-11 : #1A0033;
+    --Indigo-12 : #0D001A;
+
+    --Navy-Blue-1 : #E6ECF5;
+    --Navy-Blue-2 : #CCD9EB;
+    --Navy-Blue-3 : #99B3D6;
+    --Navy-Blue-4 : #668CC2;
+    --Navy-Blue-5 : #3366AD;
+    --Navy-Blue-6 : #004099;
+    --Navy-Blue-7 : #003580;
+    --Navy-Blue-8 : #002966;
+    --Navy-Blue-9 : #001F4D;
+    --Navy-Blue-10 : #001433;
+    --Navy-Blue-11 : #000A1A;
+    --Navy-Blue-12 : #00040D;
+
+    --Orange-1 : #FFF2E6;
+    --Orange-2 : #FFE5CC;
+    --Orange-3 : #FFD9B3;
+    --Orange-4 : #FFCC99;
+    --Orange-5 : #FFBF80;
+    --Orange-6 : #FFB266;
+    --Orange-7 : #FFA64D;
+    --Orange-8 : #FF9933;
+    --Orange-9 : #CC7A00;
+    --Orange-10 : #995C00;
+    --Orange-11 : #663D00;
+    --Orange-12 : #331F00;
+
+    --Pink-1 : #FFE6F0;
+    --Pink-2 : #FFCCE0;
+    --Pink-3 : #FFB3D1;
+    --Pink-4 : #FF99C2;
+    --Pink-5 : #FF80B3;
+    --Pink-6 : #FF66A3;
+    --Pink-7 : #FF4D94;
+    --Pink-8 : #FF3385;
+    --Pink-9 : #CC0066;
+    --Pink-10 : #99004D;
+    --Pink-11 : #660033;
+    --Pink-12 : #33001A;
+
+    --Purple-1 : #F5E6FF;
+    --Purple-2 : #E6CCFF;
+    --Purple-3 : #D9B3FF;
+    --Purple-4 : #CC99FF;
+    --Purple-5 : #BF80FF;
+    --Purple-6 : #B266FF;
+    --Purple-7 : #9933FF;
+    --Purple-8 : #8000FF;
+    --Purple-9 : #6600CC;
+    --Purple-10 : #4D0099;
+    --Purple-11 : #330066;
+    --Purple-12 : #1A0033;
+
+    --Red-1 : #FFE6E6;
+    --Red-2 : #FFCCCC;
+    --Red-3 : #FFB3B3;
+    --Red-4 : #FF9999;
+    --Red-5 : #FF8080;
+    --Red-6 : #FF6666;
+    --Red-7 : #FF4D4D;
+    --Red-8 : #FF3333;
+    --Red-9 : #CC0000;
+    --Red-10 : #990000;
+    --Red-11 : #660000;
+    --Red-12 : #330000;
+
+    --Teal-1 : #E0FFFF;
+    --Teal-2 : #B3F0F0;
+    --Teal-3 : #99E6E6;
+    --Teal-4 : #80DBDB;
+    --Teal-5 : #66D1D1;
+    --Teal-6 : #4DC6C6;
+    --Teal-7 : #33BABA;
+    --Teal-8 : #1AAFAF;
+    --Teal-9 : #009999;
+    --Teal-10 : #007373;
+    --Teal-11 : #004D4D;
+    --Teal-12 : #002626;
+
+    --White-To-Black-1 : #FFFFFF;
+    --White-To-Black-2 : #F5F5F5;
+    --White-To-Black-3 : #E0E0E0;
+    --White-To-Black-4 : #CCCCCC;
+    --White-To-Black-5 : #B3B3B3;
+    --White-To-Black-6 : #999999;
+    --White-To-Black-7 : #808080;
+    --White-To-Black-8 : #666666;
+    --White-To-Black-9 : #4D4D4D;
+    --White-To-Black-10 : #333333;
+    --White-To-Black-11 : #1A1A1A;
+    --White-To-Black-12 : #000000;
+
+    --Yellow-1 : #FFFFE6;
+    --Yellow-2 : #FFFFCC;
+    --Yellow-3 : #FFFFB3;
+    --Yellow-4 : #FFFF99;
+    --Yellow-5 : #FFFF80;
+    --Yellow-6 : #FFFF66;
+    --Yellow-7 : #FFEB3B;
+    --Yellow-8 : #E6CC00;
+    --Yellow-9 : #CCCC00;
+    --Yellow-10 : #999900;
+    --Yellow-11 : #666600;
+    --Yellow-12 : #333300;
+}
+
+h1{
+    font-size: 1.5rem;
+}
+h2{
+    font-size: 1.5rem;
+}
+h3{
+    font-size: 1.17rem;
+}
+h4{
+    font-size: 1rem;
+}
+h5{
+    font-size: 0.83rem;
+}
+h6{
+    font-size: 0.67rem;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+
+/* =============== */
+/* ===== btn ===== */
+/* =============== */
+
+.btn{
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    border: none;
+    transition: all 0.3s;
+    cursor: pointer;
+    /* font-family: ; */
+}
+.btn.btn-block{
+    width: 100%;
+}
+/* === primary btn === */
+/* =================== */
+.btn.btn-primary{
+    background-color: #007BFF;
+    color: white;
+}
+.btn.btn-primary:hover{
+    background-color: #0069D9;
+}
+.btn.btn-outline-primary{
+    background-color: white;
+    border: 1px solid #007BFF;
+    color: #007BFF;
+}
+.btn.btn-outline-primary:hover{
+    background-color: #007BFF;
+    color: white;
+}
+.btn.btn-inline-primary{
+    background-color: #007BFF;
+    border: 1px solid #007BFF;
+    color: white;
+}
+.btn.btn-inline-primary:hover{
+    background-color: white;
+    color: #007BFF;
+}
+/* === primary secondary === */
+/* ========================= */
+.btn.btn-secondary{
+    background-color: #6C757D;
+    color: white;
+}
+.btn.btn-secondary:hover{
+    background-color: #5A6268;
+}
+.btn.btn-outline-secondary{
+    background-color: white;
+    border: 1px solid #6C757D;
+    color: #6C757D;
+}
+.btn.btn-outline-secondary:hover{
+    background-color: #6C757D;
+    color: white;
+}
+.btn.btn-inline-secondary{
+    background-color: #6C757D;
+    border: 1px solid #6C757D;
+    color: white;
+}
+.btn.btn-inline-secondary:hover{
+    background-color: white;
+    color: #6C757D;
+}
+/* === primary success === */
+/* ======================= */
+.btn.btn-success{
+    background-color: #28A745;
+    color: white;
+}
+.btn.btn-success:hover{
+    background-color: #218838;
+}
+.btn.btn-outline-success{
+    background-color: white;
+    border: 1px solid #28A745;
+    color: #28A745;
+}
+.btn.btn-outline-success:hover{
+    background-color: #28A745;
+    color: white;
+}
+.btn.btn-inline-success{
+    background-color: #28A745;
+    border: 1px solid #28A745;
+    color: white;
+}
+.btn.btn-inline-success:hover{
+    background-color: white;
+    color: #28A745;
+}
+/* === primary danger === */
+/* ====================== */
+.btn.btn-danger{
+    background-color: #DC3545;
+    color: white;
+}
+.btn.btn-danger:hover{
+    background-color: #C82333;
+}
+.btn.btn-outline-danger{
+    background-color: white;
+    border: 1px solid #DC3545;
+    color: #DC3545;
+}
+.btn.btn-outline-danger:hover{
+    background-color: #DC3545;
+    color: white;
+}
+.btn.btn-inline-danger{
+    background-color: #DC3545;
+    border: 1px solid #DC3545;
+    color: white;
+}
+.btn.btn-inline-danger:hover{
+    background-color: white;
+    color: #DC3545;
+}
+/* === primary warning === */
+/* ======================= */
+.btn.btn-warning{
+    background-color: #FFC107;
+    color: black;
+}
+.btn.btn-warning:hover{
+    background-color: #E0A800;
+}
+.btn.btn-outline-warning{
+    background-color: white;
+    border: 1px solid #FFC107;
+    color: #FFC107;
+}
+.btn.btn-outline-warning:hover{
+    background-color: #FFC107;
+    color: black;
+}
+.btn.btn-inline-warning{
+    background-color: #FFC107;
+    border: 1px solid #FFC107;
+    color: white;
+}
+.btn.btn-inline-warning:hover{
+    background-color: white;
+    color: #FFC107;
+}
+/* === primary info === */
+/* ==================== */
+.btn.btn-info{
+    background-color: #17A2B8;
+    color: white;
+}
+.btn.btn-info:hover{
+    background-color: #138496;
+}
+.btn.btn-outline-info{
+    background-color: white;
+    border: 1px solid #17A2B8;
+    color: #17A2B8;
+}
+.btn.btn-outline-info:hover{
+    background-color: #17A2B8;
+    color: white;
+}
+.btn.btn-inline-info{
+    background-color: #17A2B8;
+    border: 1px solid #17A2B8;
+    color: white;
+}
+.btn.btn-inline-info:hover{
+    background-color: white;
+    color: #17A2B8;
+}
+/* === primary light === */
+/* ===================== */
+.btn.btn-light{
+    background-color: #F8F9FA;
+    color: black;
+}
+.btn.btn-light:hover{
+    background-color: #E2E6EA;
+}
+.btn.btn-outline-light{
+    background-color: white;
+    border: 1px solid #E2E6EA;
+    color: #E2E6EA;
+}
+.btn.btn-outline-light:hover{
+    background-color: #F8F9FA;
+    color: black;
+}
+.btn.btn-inline-light{
+    background-color: #F8F9FA;
+    border: 1px solid #E2E6EA;
+    color: black;
+}
+.btn.btn-inline-light:hover{
+    background-color: white;
+    color: #E2E6EA;
+}
+/* === primary dark === */
+/* ==================== */
+.btn.btn-dark{
+    background-color: #343A40;
+    color: white;
+}
+.btn.btn-dark:hover{
+    background-color: #23272B;
+}
+.btn.btn-outline-dark{
+    background-color: white;
+    border: 1px solid #343A40;
+    color: #343A40;
+}
+.btn.btn-outline-dark:hover{
+    background-color: #343A40;
+    color: white;
+}
+.btn.btn-inline-dark{
+    background-color: #343A40;
+    border: 1px solid #343A40;
+    color: white;
+}
+.btn.btn-inline-dark:hover{
+    background-color: white;
+    color: #343A40;
+}
+
+
+/* ============== */
+/* ==== Link ==== */
+/* ============== */
+
+.link{
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    text-transform: capitalize;
+    /* font-family: ; */
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.link.link-primary{
+    color: #007BFF;
+}
+.link.link-secondary{
+    color: #6C757D;
+}
+.link.link-success{
+    color: #28A745;
+}
+.link.link-danger{
+    color: #DC3545;
+}
+.link.link-warning{
+    color: #FFC107;
+}
+.link.link-info{
+    color: #17A2B8;
+}
+.link.link-light{
+    color: #E2E6EA;
+}
+.link.link-dark{
+    color: #343A40;
+}
+
+
+/* ================= */
+/* ===== Alert ===== */
+/* ================= */
+
+.alert{
+    margin: 2.5rem 0;
+    text-transform: capitalize;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0 0.5rem;
+}
+.alert div.alert-icon{
+    font-size: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 8px 1px var(--White-To-Black-4);
+    color: white;
+    text-shadow: 0px 0px 1px var(--White-To-Black-8);
+}
+
+/* === alert-primary === */
+.alert.alert-primary{
+    color: var(--Blue-10);
+    background-color: #CCE5FF;
+    border: 1px solid #B7D8FD;
+    /* HTML icon : */
+    /*
+    &#5029;
+    */
+}
+.alert.alert-primary div.alert-icon{
+    background-color: var(--Blue-7);
+}
+
+/* === alert-success === */
+.alert.alert-success{
+    color: var(--Green-10);
+    background-color: #D4EDDA;
+    border: 1px solid #C3E6CB;
+    /* HTML icon : */
+    /*
+    &#10003;
+    */
+}
+.alert.alert-success div.alert-icon{
+    background-color: var(--Green-7);
+}
+
+/* === alert-warning === */
+.alert.alert-warning{
+    color: var(--Yellow-10);
+    background-color: #FFF3CD;
+    border: 1px solid #FFEEBA;
+    /* HTML icon : */
+    /*
+    &#33;
+    */
+}
+.alert.alert-warning div.alert-icon{
+    background-color: var(--Yellow-7);
+}
+
+/* === alert-danger === */
+.alert.alert-danger{
+    color: var(--Red-10);
+    background-color: #F8D7DA;
+    border: 1px solid #F5C6CB;
+    /* HTML icon : */
+    /*
+    &#10799;
+    */
+}
+.alert.alert-danger div.alert-icon{
+    background-color: var(--Red-7);
+}
+
+/* HTML elements : */
+/*
+<div className="alert alert-danger">
+    <div className='alert-icon'>&#10799;</div>
+    <p></p>
+</div>
+*/
+
+
+/* ========================== */
+/* ====== section-title ===== */
+/* ========================== */
+
+h2.section-title.left{
+    text-align: left;
+}
+h2.section-title.right{
+    text-align: right;
+}
+h2.section-title.center{
+    text-align: center;
+}
+h2.section-title{
+    color: var(--Aqua-12);
+    margin: 1.5rem 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+h2.section-title span.first-value{
+    color: var(--Aqua-12);
+    padding-right: 0.5rem;
+}
+h2.section-title span.second-value{
+    color: var(--Aqua-6);
+    padding-left: 0.5rem;
+}
+/* HTML elements : */
+/*
+<h2 className='section-title center'>
+    <span className='first-value'></span>
+    <span className='second-value'></span>
+</h2>
+*/
+
+
+/* ============================ */
+/* ====== underline-title ===== */
+/* ============================ */
+
+div.underline-title{
+    text-align: center;
+}
+div.underline-title h2{
+    text-transform: capitalize;
+    color: var(--Aqua-12);
+    margin-bottom: 0.5rem;
+}
+div.underline-title div.underline{
+    margin: 0 auto;
+    width: 4rem;
+    height: 0.25rem;
+}
+div.underline-title div.underline.underline-primary{
+    background-color: #007BFF;
+}
+div.underline-title div.underline.underline-secondary{
+    background-color: #5A6268;
+}
+div.underline-title div.underline.underline-success{
+    background-color: #28A745;
+}
+div.underline-title div.underline.underline-danger{
+    background-color: #DC3545;
+}
+div.underline-title div.underline.underline-warning{
+    background-color: #FFC107;
+}
+div.underline-title div.underline.underline-info{
+    background-color: #17A2B8;
+}
+div.underline-title div.underline.underline-light{
+    background-color: #F8F9FA;
+}
+div.underline-title div.underline.underline-dark{
+    background-color: #343A40;
+}
+/* HTML elements : */
+/*
+<div className='underline-title'>
+    <h2></h2>
+    <div className='underline underline-warning'></div>
+</div>
+*/
+
+
+/* ================== */
+/* ===== Inputs ===== */
+/* ================== */
+
+input.input-control{
+    box-shadow: 0 0 1px 1px #23272B;
+    padding: 0.50rem 1rem;
+    border-radius: 0.5rem;
+    outline: none;
+    border: none;
+    /* font-family: ; */
+    letter-spacing: 2xp;
+}
+input.input-control:focus{
+    box-shadow: 0 0 4px 1px var(--Blue-5);
+}
+input.input-control::placeholder{
+    text-transform: capitalize;
+    /* font-family: ; */
+    letter-spacing: 2xp;
+}
+
+
+/* ========================== */
+/* ====== Error Message ===== */
+/* ========================== */
+
+.error-message{
+    text-align: center;
+    color: red;
+}
+
+
+/* ============================ */
+/* ====== Loading Message ===== */
+/* ============================ */
+
+/* parent element */
+.circle-loading{
+    margin: 2.5rem 0;
+    text-align: center;
+}
+/* child element */
+.circle-loading-icon{
+    margin: 0 auto;
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    border: 8px solid var(--Aqua-7);
+    border-bottom-color: var(--Aqua-10);
+    text-align: center;
+    animation: spin 0.8s linear infinite;
+}
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    20%{
+        transform: rotate(72deg);
+    }
+    40%{
+        transform: rotate(144deg);
+    }
+    60%{
+        transform: rotate(216deg);
+    }
+    80%{
+        transform: rotate(288deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* ======================== */
+/* ====== Grid System ===== */
+/* ======================== */
+
+.section-center{
+    max-width: 1340px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.column{
+    max-width: 1340px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1.25rem;
+}
+
+/* === column-6 === */
+
+.column.column-6{
+    grid-template-columns: repeat(6, 1fr);
+}
+@media screen and (max-width:1400px){
+    .column.column-6{
+        max-width: 1200px;
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+@media screen and (max-width:1240px){
+    .column.column-6{
+        max-width: 992px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media screen and (max-width:1024px){
+    .column.column-6{
+        max-width: 768px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (max-width:840px){
+    .column.column-6{
+        max-width: 567px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width:640px){
+    .column.column-6{
+        max-width: 480px;
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width:567px){
+    .column.column-6{
+        width: 90%;
+    }
+}
+
+
+/* === column-5 === */
+
+.column.column-5{
+    grid-template-columns: repeat(5, 1fr);
+}
+@media screen and (max-width:1400px){
+    .column.column-5{
+        max-width: 1200px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media screen and (max-width:1240px){
+    .column.column-5{
+        max-width: 992px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (max-width:1024px){
+    .column.column-5{
+        max-width: 768px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width:840px){
+    .column.column-5{
+        max-width: 567px;
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width:640px){
+    .column.column-5{
+        max-width: 480px;
+    }
+}
+@media screen and (max-width:567px){
+    .column.column-5{
+        width: 90%;
+    }
+}
+
+/* === column-4 === */
+
+.column.column-4{
+    grid-template-columns: repeat(4, 1fr);
+}
+@media screen and (max-width:1400px){
+    .column.column-4{
+        max-width: 1200px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (max-width:1240px){
+    .column.column-4{
+        max-width: 992px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width:1024px){
+    .column.column-4{
+        max-width: 567px;
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width:640px){
+    .column.column-4{
+        max-width: 480px;
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width:567px){
+    .column.column-4{
+        width: 90%;
+    }
+}
+
+/* === column-3 === */
+
+.column.column-3{
+    grid-template-columns: repeat(3, 1fr);
+}
+@media screen and (max-width:1400px){
+    .column.column-3{
+        max-width: 1200px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width:1240px){
+    .column.column-3{
+        max-width: 567px;
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width:640px){
+    .column.column-3{
+        max-width: 480px;
+    }
+}
+@media screen and (max-width:567px){
+    .column.column-3{
+        width: 90%;
+    }
+}
+
+/* === column-2 === */
+
+.column.column-2{
+    grid-template-columns: repeat(2, 1fr);
+}
+@media screen and (max-width:1400px){
+    .column.column-2{
+        max-width: 567px;
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width:640px){
+    .column.column-2{
+        max-width: 480px;
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width:567px){
+    .column.column-2{
+        width: 90%;
+    }
+}
+
+/* === column-1 === */
+
+.column.column-1{
+    grid-template-columns: 1fr;
+}
+@media screen and (max-width:1400px){
+    .column.column-1{
+        max-width: 992px;
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width:1240px){
+    .column.column-1{
+        max-width: 840px;
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width:1024px){
+    .column.column-1{
+        max-width: 640px;
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width:768px){
+    .column.column-1{
+        max-width: 567px;
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width:640px){
+    .column.column-1{
+        width: 90%;
+    }
+}
