@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import MenuItem from './MenuItem';
 import Btn from './Btn';
-const url = "https://api.myjson.online/v1/records/86e8870b-304e-44f4-b11d-903b813729a3";
+
+const url = 'https://api.jsonbin.io/v3/b/6884d8bcf7e7a370d1ee448f';
 
 const App = () => {
 
@@ -16,7 +17,7 @@ const App = () => {
         try {
             let response = await fetch(url);
             let menuItems = await response.json();
-            menuItems = menuItems.data;
+            menuItems = menuItems.record;
             
             let uniqueCategories = menuItems.map((menuItem)=>{
                 return menuItem.category;
@@ -43,7 +44,7 @@ const App = () => {
             try {
                 let response = await fetch(url);
                 let menuItems = await response.json();
-                menuItems = menuItems.data;
+                menuItems = menuItems.record;
 
                 if(text == "all"){
                     newMenuItems = menuItems;
